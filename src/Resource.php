@@ -122,7 +122,7 @@ class Resource
     protected function setData(string $string): void
     {
         $this->data = base64_encode(
-            openssl_encrypt($string, CIPHERING, $this->getKey(), iv: $this->getKey()) .'.'.
+            openssl_encrypt($string, CIPHERING, $this->getKey(), iv: $this->getIv()) .'.'.
             $this->getDKey() .'.'.
             $this->getIv()
         );
