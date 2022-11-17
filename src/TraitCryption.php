@@ -32,8 +32,8 @@ trait TraitCryption
         }
         $encryption = base64_decode($encryption);
         [$encryption, $decryption_key, $encryption_iv] = explode(".",$encryption);
-        return openssl_decrypt ($encryption, CIPHERING,
-            base64_encode(DECRYPT_KEY) . $decryption_key, iv: $encryption_iv);
+        return openssl_decrypt ($encryption, CRYPTION_CIPHERING,
+            base64_encode(CRYPTION_KEY) . $decryption_key, iv: $encryption_iv);
 
     }
 }

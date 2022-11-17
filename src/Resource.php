@@ -56,7 +56,7 @@ class Resource
      */
     private function setLength(): void
     {
-        $this->length = openssl_cipher_iv_length(CIPHERING);
+        $this->length = openssl_cipher_iv_length(CRYPTION_CIPHERING);
     }
 
     /**
@@ -89,7 +89,7 @@ class Resource
      */
     private function setKey(): void
     {
-        $this->key = base64_encode(DECRYPT_KEY) . $this->getDKey();
+        $this->key = base64_encode(CRYPTION_KEY) . $this->getDKey();
     }
 
     /**
@@ -122,7 +122,7 @@ class Resource
     protected function setData(string $string): void
     {
         $this->data = base64_encode(
-            openssl_encrypt($string, CIPHERING, $this->getKey(), iv: $this->getIv()) .'.'.
+            openssl_encrypt($string, CRYPTION_CIPHERING, $this->getKey(), iv: $this->getIv()) .'.'.
             $this->getDKey() .'.'.
             $this->getIv()
         );

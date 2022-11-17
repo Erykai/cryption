@@ -4,8 +4,8 @@ Encryption and decryption data
 
 define const
 ```php
-const CIPHERING = "BF-CBC";
-const DECRYPT_KEY = "Aa1@#LLkMmJ,;l//";
+const CRYPTION_CIPHERING = "BF-CBC";
+const CRYPTION_KEY = "Aa1@#LLkMmJ,;l//";
 ```
 
 ```php
