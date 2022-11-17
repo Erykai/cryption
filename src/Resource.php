@@ -39,8 +39,8 @@ class Resource
     {
         $this->setLength();
         $this->setIv();
-        $this->setKey();
         $this->setDKey();
+        $this->setKey();
     }
 
     /**
