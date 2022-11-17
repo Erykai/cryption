@@ -5,6 +5,7 @@ Encryption and decryption data
 define const
 ```php
 const CIPHERING = "BF-CBC";
+const DECRYPT_KEY = "Aa1@#LLkMmJ,;l//";
 ```
 
 ```php
@@ -15,8 +16,8 @@ use Erykai\Cryption\Cryption;
 $email = "webav.com.br@gmail.com";
 
 $Cryption = new Cryption();
-$emailCryption = $Cryption->encryption($email);
-$emailDecryption = $Cryption->decryption($emailCryption);
+$emailCryption = $Cryption->encrypt($email);
+$emailDecryption = $Cryption->decrypt($emailCryption);
 
 print_r($emailCryption, $emailDecryption);
 ```
