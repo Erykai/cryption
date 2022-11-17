@@ -1,0 +1,21 @@
+{
+  "name": "erykai/cryption",
+  "description": "Encryption and decryption data",
+  "minimum-stability": "stable",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "alexdeovidal",
+      "email": "contato@webav.com.br"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Erykai\\Cryption\\": "src"
+    }
+  },
+  "require": {
+    "PHP": ">=8.0",
+    "ext-openssl": "*"
+  }
+}
