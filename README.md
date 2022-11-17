@@ -2,6 +2,25 @@
 
 Encryption and decryption data
 
+define const
+```php
+const CIPHERING = "BF-CBC";
+```
+
+```php
+require "config.php";
+require "vendor/autoload.php";
+use Erykai\Cryption\Cryption;
+
+$email = "webav.com.br@gmail.com";
+
+$Cryption = new Cryption();
+$emailCryption = $Cryption->encryption($email);
+$emailDecryption = $Cryption->decryption($emailCryption);
+
+print_r($emailCryption, $emailDecryption);
+```
+
 ## Contribution
 
 All contributions will be analyzed, if you make more than one change, make the commit one by one.
