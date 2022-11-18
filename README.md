@@ -33,7 +33,7 @@ If you find defaults send an email reporting to webav.com.br@gmail.com.
 ## Credits
 
 - [Alex de O. Vidal](https://github.com/alexdeovidal) (Developer)
-- [All contributions](https://github.com/erykai/upload/contributors) (Contributors)
+- [All contributions](https://github.com/erykai/cryption/contributors) (Contributors)
 
 ## License
 
