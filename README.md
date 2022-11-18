@@ -37,4 +37,4 @@ If you find defaults send an email reporting to webav.com.br@gmail.com.
 
 ## License
 
-The MIT License (MIT). Please see [License](https://github.com/erykai/upload/LICENSE) for more information.
+The MIT License (MIT). Please see [License](https://github.com/erykai/cryption/LICENSE) for more information.
