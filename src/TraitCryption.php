@@ -6,6 +6,7 @@ use Exception;
 
 trait TraitCryption
 {
+    abstract protected function setData(): void;
     /**
      * @throws Exception
      */
