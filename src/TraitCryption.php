@@ -6,30 +6,32 @@ use Exception;
 
 trait TraitCryption
 {
-    /**
-     * @throws Exception
-     */
     protected function encryption(string $string): string
     {
         $this->setData($string);
         $base = $this->getData();
 
-        $base = bin2hex($base);
-
-        return $base;
+        return bin2hex($base);
     }
 
-    /**
-     * @param string $encryption
-     * @return string
-     */
     protected function decryption(string $encryption): string
     {
+        if (!ctype_xdigit($encryption)) {
+            throw new Exception("The input string is not a valid hexadecimal string.");
+        }
+
         $encryption = hex2bin($encryption);
 
         $encryption = base64_decode($encryption);
-        [$encryption, $decryption_key, $encryption_iv] = explode(".", $encryption);
-        return openssl_decrypt($encryption, CRYPTION_CIPHERING,
-            base64_encode(CRYPTION_KEY) . $decryption_key, iv: $encryption_iv);
+        [$encrypted_data, $decryption_key, $encryption_iv] = explode(".", $encryption);
+
+        $encryption_iv = hex2bin($encryption_iv);
+
+        $combined_key = CRYPTION_KEY . hex2bin($decryption_key);
+
+        return openssl_decrypt($encrypted_data, CRYPTION_CIPHERING,
+            $combined_key, 0, $encryption_iv);
     }
+
+
 }
