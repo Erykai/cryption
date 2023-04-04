@@ -14,10 +14,13 @@ trait TraitCryption
         return bin2hex($base);
     }
 
-    protected function decryption(string $encryption): string
+    protected function decryption(string $encryption): ?string
     {
         if (!ctype_xdigit($encryption)) {
-            throw new Exception("The input string is not a valid hexadecimal string.");
+            return null;
+        }
+        if (strlen($encryption) % 2 !== 0) {
+            return null;
         }
 
         $encryption = hex2bin($encryption);

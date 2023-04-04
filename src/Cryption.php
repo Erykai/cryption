@@ -14,7 +14,7 @@ class Cryption extends Resource
         return $this->encryption($string);
     }
 
-    public function decrypt(string $encrypted): string
+    public function decrypt(string $encrypted): ?string
     {
         return $this->decryption($encrypted);
     }
